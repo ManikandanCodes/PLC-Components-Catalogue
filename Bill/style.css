@@ -1,0 +1,417 @@
+/* Base */
+body {
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  margin: 0;
+}
+
+.invoice-wrap {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 12px 16px;
+}
+
+/* Header layout: seller left, meta right */
+.invoice-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.seller-top {
+  flex: 1 1 auto;
+  max-width: 62%;
+}
+
+h1 {
+  color: #1769e0;
+  margin: 6px 0 8px;
+}
+
+.seller-fixed {
+  font-size: 0.98rem;
+  color: #333;
+  line-height: 1.35;
+}
+
+.seller-fixed .seller-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+  text-transform: none;
+}
+
+.seller-fixed .seller-gstin {
+  color: #2f3c56;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Meta area */
+.meta {
+  flex: 0 0 260px;
+  display: block;
+}
+
+.meta label {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.meta input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #e3e8f2;
+  border-radius: 8px;
+}
+
+.meta-print {
+  color: #333;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+/* Buyer block */
+.party {
+  margin: 14px 0;
+}
+
+.party .block {
+  background: #f7f9fe;
+  border: 1px solid #eef2f8;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.party .block h3 {
+  margin: 4px 0 8px;
+  color: #1769e0;
+}
+
+.party input,
+.party textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #e3e8f2;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.party .row2 {
+  display: flex;
+  gap: 8px;
+}
+
+.party .row2 input {
+  flex: 1;
+}
+
+/* Items table */
+.items table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.items th,
+.items td {
+  padding: 8px;
+  border: 1px solid #eef2f8;
+}
+
+.items thead th {
+  background: #f4f8fd;
+  text-align: left;
+}
+
+.items input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid #e3e8f2;
+  border-radius: 6px;
+}
+
+.items .items-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.totals-wrap {
+  flex: 0 0 auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.totals {
+  min-width: 320px;
+  margin-left: auto;
+  text-align: left;
+}
+
+.totals>div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.totals .grand {
+  font-weight: 700;
+  color: #1565c0;
+  border-top: 2px solid #dfe7f5;
+  padding-top: 8px;
+}
+
+/* Footer */
+.invoice-foot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+#printBtn {
+  background: #19946c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+/* Utility: print-only mirrors for inputs */
+.print-only {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .invoice-head {
+    flex-direction: column;
+  }
+
+  .seller-top {
+    max-width: 100%;
+  }
+
+  .meta {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+}
+
+/* Print rules */
+@media print {
+
+  /* Hide controls */
+  #printBtn,
+  #addRow,
+  button.rm {
+    display: none !important;
+  }
+
+  /* Table inputs hidden, mirror spans shown (JS injects these spans per row) */
+  td input {
+    display: none !important;
+  }
+
+  .pname-print,
+  .price-print,
+  .qty-print {
+    display: inline !important;
+  }
+
+  /* Buyer mirrors */
+  .buyer-input,
+  .buyer-textarea {
+    display: none !important;
+  }
+
+  .buyer-print {
+    display: block !important;
+    white-space: pre-wrap;
+  }
+
+  /* Meta mirrors: hide inputs, show text */
+  .meta input {
+    display: none !important;
+  }
+
+  .meta-print {
+    display: block !important;
+  }
+
+  /* Keep header spacing and totals position */
+  .invoice-head {
+    gap: 24px;
+  }
+
+  .items .items-actions {
+    break-inside: avoid;
+  }
+
+  .totals-wrap {
+    width: 100%;
+    display: block;
+  }
+
+  .totals {
+    margin-left: auto;
+  }
+}
+
+/* Add-row button*/
+#addRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  background: #1769e0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  line-height: 1;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(23, 105, 224, 0.12);
+}
+
+#addRow::before {
+  content: "+";
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#addRow:hover {
+  filter: brightness(0.96);
+}
+
+/* Ensure the left side in items-actions*/
+.items .items-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.items .items-actions>#addRow {
+  flex: 0 0 auto;
+}
+
+/* Keep totals on the right*/
+.totals-wrap {
+  flex: 1 1 360px;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 320px;
+}
+
+
+.items table button,
+.items td button {
+  all: unset;
+}
+
+.items td button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #f1f4fa;
+  border-radius: 6px;
+  color: #d32f2f;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Wraps logo and text side-by-side */
+.seller-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* Logo styling */
+.seller-logo {
+  height: 64px;
+  width: auto;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Container for title + seller text */
+.seller-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Title spacing */
+.invoice-title {
+  margin: 0 0 6px 0;
+  color: #1769e0;
+}
+
+/* Print logo */
+@media print {
+  .seller-logo {
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    height: 56px;
+  }
+
+  .seller-fixed .seller-name {
+    font-size: 1rem;
+  }
+
+  .seller-fixed .seller-gstin {
+    margin-bottom: 2px;
+  }
+}
+
+/* Preview & Print PDF button */
+/* ========================= */
+
+.invoice-foot .actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Preview & Print button */
+#previewBtn {
+  background: #1769e0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(23, 105, 224, 0.12);
+}
+
+#previewBtn:hover {
+  filter: brightness(0.96);
+}
+
+
+/* Hide the buttons when printing  */
+@media print {
+
+  #previewBtn,
+  #downloadBtn {
+    display: none !important;
+  }
+}

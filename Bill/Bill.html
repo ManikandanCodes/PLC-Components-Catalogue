@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invoice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="invoice-wrap">
+    <header class="invoice-head">
+      <div class="seller-top">
+        <div class="seller-brand">
+          <img src=" images/Zenjade-Automation-logo.jpg" alt="Zenjade Automation Technology Private Limited"
+            class="seller-logo" />
+
+          <div class="brand-text">
+            <h1 class="invoice-title">Tax Invoice</h1>
+
+            <div class="seller-fixed">
+              <!-- 1) Company name  -->
+              <div class="seller-name">Zenjade Automation Technology Private Limited</div>
+
+              <!-- 2) GSTIN  -->
+              <div class="seller-gstin">GSTIN: 33AACCZ3045M1Z6</div>
+
+              <!-- 3) Address-->
+              <div>No.22, 2nd Floor, 7th St, Balaji Nagar, Nanganallur, Chennai, Tamil Nadu 600061</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta meta-card">
+        <label>Invoice #
+          <input id="invNo" type="text" />
+          <div id="invNoPrint" class="meta-print print-only"></div>
+        </label>
+        <label>Date
+          <input id="invDate" type="date" />
+          <div id="invDatePrint" class="meta-print print-only"></div>
+        </label>
+        <label>Due
+          <input id="dueDate" type="date" />
+          <div id="dueDatePrint" class="meta-print print-only"></div>
+        </label>
+      </div>
+    </header>
+
+
+
+    <!-- Buyer block with print mirrors -->
+    <section class="party">
+      <div class="block">
+        <h3>Bill To</h3>
+
+        <input id="buyerName" class="buyer-input" placeholder="Buyer / Company name" />
+        <div id="buyerNamePrint" class="buyer-print print-only"></div>
+
+        <textarea id="buyerAddr" class="buyer-textarea" rows="3" placeholder="Address"></textarea>
+        <div id="buyerAddrPrint" class="buyer-print print-only"></div>
+
+        <input id="buyerGstin" class="buyer-input" placeholder="GSTIN (optional)" />
+        <div id="buyerGstinPrint" class="buyer-print print-only"></div>
+
+        <div class="row2">
+          <input id="buyerPhone" class="buyer-input" placeholder="Phone" />
+          <input id="buyerEmail" class="buyer-input" placeholder="Email" />
+        </div>
+        <div id="buyerContactPrint" class="buyer-print print-only"></div>
+      </div>
+    </section>
+
+    <!-- Items table -->
+    <section class="items">
+      <table id="itemsTable">
+        <thead>
+          <tr>
+            <th style="width:40px;">#</th>
+            <th>Product</th>
+            <th style="width:120px;">Unit Price</th>
+            <th style="width:80px;">Qty</th>
+            <th style="width:140px;">Amount</th>
+            <th style="width:40px;"></th>
+          </tr>
+        </thead>
+        <tbody id="itemBody"></tbody>
+      </table>
+
+      <!-- Actions and totals: totals wrap keeps them right-aligned -->
+      <div class="items-actions">
+        <button id="addRow">Add row</button>
+
+        <div class="totals-wrap">
+          <div class="totals">
+            <div><span>Subtotal</span><span id="subTotal">₹0.00</span></div>
+            <div><span>GST (18%)</span><span id="gstAmt">₹0.00</span></div>
+            <div class="grand"><span>Total</span><span id="grandTotal">₹0.00</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="invoice-foot">
+      <div class="actions">
+        <button id="previewBtn" type="button">Preview & Print PDF</button>
+       
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="bill.js"></script>
+  
+
+</body>
+
+</html>

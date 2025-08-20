@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PLC Components Catalog - B2B</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <nav
+    style="display:flex; align-items:center; gap:18px; padding:10px 18px; background:#fff; border-bottom:1px solid #e0e0e0;">
+    <img src="images/Zenjade-Automation-logo.jpg" alt="Zenjade Automation Logo" style="height:42px; margin-right:10px;">
+    <div style="display:flex; flex-direction:column; justify-content:center;">
+      <span style="font-size:1.25rem; font-weight:600; color:#222;">Zenjade Automation Technology Private Limited</span>
+      <span style="font-size:0.92rem; color:#616161;">GSTIN: 33AACCZ3045M1Z6</span>
+    </div>
+    <input type="text" id="searchBox" placeholder="Search components..."
+      style="margin-left:32px; flex:1; max-width:260px; padding:6px 10px;">
+    <select id="filterSelect" style="margin-left:10px; padding:6px 10px;">
+      <option value="all">All</option>
+      <option value="plc">PLC & Controllers</option>
+      <option value="hmi">HMI & SCADA</option>
+      <option value="drives">Drives & Motion</option>
+      <option value="power">Power & Distribution</option>
+      <option value="sensors">Sensors & Field</option>
+      <option value="switchgear">Switchgear & Control</option>
+      <option value="safety">Safety Automation</option>
+      <option value="networking">Industrial Networking</option>
+      <option value="panel">Panel Accessories</option>
+    </select>
+    <button id="cartBtn" class="view-details-btn"
+      style="position:relative; margin-left:16px; padding:7px 22px; font-size:1rem; border-radius:5px;">
+      View Cart
+      <span id="cartBadge"
+        style="display:none; position:absolute; top:2px; right:4px; background:#e53935; color:#fff; font-size:0.85rem; border-radius:50%; padding:2px 7px;">0</span>
+    </button>
+    <h1>PLC Component Catalogue</h1>
+  </nav>
+  <!-- Product Grid -->
+  <div id="componentsContainer">
+
+    <!-- ================= PLC & Automation Controllers ================= -->
+    <!-- 1 -->
+    <div class="component-card" data-name="Siemens PLC S7-1200" data-price="45000" data-type="plc"
+      data-img="images/s7-1200.jpg"
+      data-desc="Overview: The Siemens S7-1200 is a compact, modular PLC for small-to-medium machines and skids. It integrates PROFINET, high-speed counters, PID control, and basic motion functions, all engineered in TIA Portal for fast commissioning. Technical: Typical CPUs with onboard DI/DO and analog variants; expandable with signal/communication modules; integrated web server and data logging. Use Cases: Packaging, conveyors, pump panels, HVAC, water/wastewater. Benefits: Reliable 24/7 operation, scalable I/O, rich diagnostics with minimal footprint.">
+      <img src="images/Siemens PLC S7-1200.jpg" alt="Siemens PLC S7-1200" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹45,000</div>
+      <h3>Siemens PLC S7-1200</h3>
+      <p class="short-desc">Compact modular PLC with PROFINET, PID & motion.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 2 -->
+    <div class="component-card" data-name="Siemens PLC S7-1500" data-price="95000" data-type="plc"
+      data-img="images/s7-1500.jpg"
+      data-desc="Overview: Flagship Siemens PLC delivering multi-core performance, integrated safety (F-CPU options), advanced trace/diagnostics, and hardened cybersecurity for complex lines. Technical: High program/data memory, deterministic motion, technology objects, PROFINET/PROFIBUS, OPC UA options. Use Cases: Automotive, FMCG high-speed packaging, process skids. Benefits: Top-tier reliability, deep diagnostics to reduce MTTR, future-proof for Industry 4.0.">
+      <img src="images/Siemens PLC S7-1500.jpg" alt="Siemens PLC S7-1500" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹95,000</div>
+      <h3>Siemens PLC S7-1500</h3>
+      <p class="short-desc">High-performance PLC with integrated safety & diagnostics.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 3 -->
+    <div class="component-card" data-name="Siemens PLC S7-300" data-price="70000" data-type="plc"
+      data-img="images/s7-300.jpg"
+      data-desc="Overview: Proven modular PLC platform widely deployed across discrete and process industries. Technical: Rack-based expansion, broad CPU range, extensive I/O catalogue, PROFIBUS/PROFINET via comm modules, technology functions. Use Cases: Manufacturing cells, utilities, plant retrofits. Benefits: Massive installed base, long lifecycle, stable and serviceable.">
+      <img src="images/Siemens PLC S7-300.jpg" alt="Siemens PLC S7-300" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹70,000</div>
+      <h3>Siemens PLC S7-300</h3>
+      <p class="short-desc">Reliable, scalable PLC with extensive I/O ecosystem.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 4 -->
+    <div class="component-card" data-name="Siemens PLC S7-400" data-price="125000" data-type="plc"
+      data-img="images/s7-400.jpg"
+      data-desc="Overview: High-capacity PLC for large process plants and distributed architectures; supports redundancy and multi-rack expansion. Technical: Powerful CPUs, large I/O count, deterministic scan, PROFIBUS/PROFINET networking. Use Cases: Power, petrochemical, metals, cement. Benefits: 24/7 availability, robust diagnostics, lifecycle support for critical infrastructure.">
+      <img src="images/Siemens PLC S7-400.jpg" alt="Siemens PLC S7-400" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,25,000</div>
+      <h3>Siemens PLC S7-400</h3>
+      <p class="short-desc">High-capacity PLC for mission-critical systems.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 5 -->
+    <div class="component-card" data-name="Compact PLCs LOGO!" data-price="18000" data-type="plc"
+      data-img="images/logo.jpg"
+      data-desc="Overview: Ultra-compact logic controller for micro-automation with simple function blocks and quick setup in LOGO! Soft Comfort. Technical: Onboard DI/DO, analog options, Ethernet variants, built-in RTC; small HMI display variants. Use Cases: Building automation, pumps, lighting, small machines. Benefits: Cost-effective, minimal wiring, fast deployment.">
+      <img src="images/Compact PLCs LOGO!.jpg" alt="Compact PLCs LOGO!" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹18,000</div>
+      <h3>Compact PLCs LOGO!</h3>
+      <p class="short-desc">Smart micro-controller for compact automation tasks.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 6 -->
+    <div class="component-card" data-name="I/O Modules Digital and Analog" data-price="9500" data-type="plc"
+      data-img="images/io-modules.jpg"
+      data-desc="Overview: Modular digital/analog I/O to expand PLC channel counts with robust isolation and diagnostics. Technical: DI/DO 24 VDC/230 VAC, relay options; AI 0–10 V, 4–20 mA, RTD/TC; AO voltage/current; hot-swap on supported racks. Use Cases: Sensor/actuator marshalling, process signals, valve control. Benefits: Fine-grained scalability, optimized panel space, simplified field wiring.">
+      <img src="images/I&O Modules Digital and Analog.jpg" alt="I/O Modules Digital and Analog" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹9,500</div>
+      <h3>I/O Modules Digital and Analog</h3>
+      <p class="short-desc">Scalable DI/DO/AI/AO expansion for PLCs.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 7 -->
+    <div class="component-card" data-name="Communication Modules Profinet, Profibus, Modbus, Ethernet/IP"
+      data-price="14500" data-type="plc" data-img="images/comm-modules.jpg"
+      data-desc="Overview: Communication modules enabling connectivity across PROFINET, PROFIBUS, Modbus (RTU/TCP), and Ethernet/IP for seamless integration with drives, HMIs, and SCADA. Technical: Serial (RS-232/485) and Ethernet options, diagnostics LEDs, network redundancy support per model. Use Cases: Multi-vendor interoperability, brownfield integration, remote I/O networks. Benefits: Flexible protocol bridging, reduced commissioning time, future-ready networking.">
+      <img src="images/Communication Modules Profinet, Profibus, Modbus, EthernetIP.jpg" alt="Communication Modules"
+        class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹14,500</div>
+      <h3>Communication Modules Profinet, Profibus, Modbus, Ethernet/IP</h3>
+      <p class="short-desc">Protocol modules for PLC networking and integration.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 8 -->
+    <div class="component-card" data-name="PLC Programming Cables and Accessories" data-price="3500" data-type="plc"
+      data-img="images/plc-cables.jpg"
+      data-desc="Overview: Programming cables, adapters, and accessories for reliable commissioning and maintenance of PLC systems. Technical: USB-to-serial converters, Ethernet patch leads, RS-485 adapters, ferrules and panel accessories for clean wiring. Use Cases: Device configuration, firmware updates, panel service kits. Benefits: Reliable connectivity, reduced downtime, technician-friendly tooling.">
+      <img src="images/PLC Programming Cables and Accessories.jpg" alt="PLC Programming Cables and Accessories"
+        class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹3,500</div>
+      <h3>PLC Programming Cables and Accessories</h3>
+      <p class="short-desc">Cables/adapters for PLC setup and service.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- ================= HMI & SCADA ================= -->
+    <!-- 9 -->
+    <div class="component-card" data-name="Basic HMI Panels KTP series" data-price="28000" data-type="hmi"
+      data-img="images/ktp-series.jpg"
+      data-desc="Overview: Entry-level KTP Basic HMIs with resistive touchscreen, function keys (on variants), and bright TFT displays. Technical: 4–10 inch sizes, PROFINET/Modbus TCP support, recipe handling, alarms, trend views. Use Cases: Operator stations on compact machines. Benefits: Affordable HMIs with essential visualization and ease of use.">
+      <img src="images/Basic HMI Panels KTP series.jpg" alt="Basic HMI Panels KTP series" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹28,000</div>
+      <h3>Basic HMI Panels KTP series</h3>
+      <p class="short-desc">Cost-effective touch HMIs for basic machines.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 10 -->
+    <div class="component-card" data-name="Advanced HMI Panels Comfort Panels" data-price="68000" data-type="hmi"
+      data-img="images/comfort-panels.jpg"
+      data-desc="Overview: Comfort Panels provide high-resolution displays, multi-touch, high performance, and advanced diagnostics. Technical: Wide size range, IP65 front, web server, scripting, archives, user management, encrypted comms. Use Cases: Complex machines needing rich UX and audit trails. Benefits: Enterprise-class visualization, reduced downtime with built-in diagnostics.">
+      <img src="images/Advanced HMI Panels Comfort Panels.jpg" alt="Advanced HMI Panels Comfort Panels"
+        class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹68,000</div>
+      <h3>Advanced HMI Panels Comfort Panels</h3>
+      <p class="short-desc">Premium multi-touch HMIs with advanced features.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 11 -->
+    <div class="component-card" data-name="Industrial Touchscreen PCs" data-price="120000" data-type="hmi"
+      data-img="images/industrial-pc.jpg"
+      data-desc="Overview: Rugged industrial Panel PCs with powerful CPUs for SCADA/MES front-ends and analytics at the edge. Technical: Fanless options, SSDs, industrial temperature range, multiple Ethernet/serial ports, IP65 front. Use Cases: Supervisory control, data historian, edge compute. Benefits: Long lifecycle, high reliability, and reduced total cost in harsh environments.">
+      <img src="images/Industrial Touchscreen PCs.jpg" alt="Industrial Touchscreen PCs" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,20,000</div>
+      <h3>Industrial Touchscreen PCs</h3>
+      <p class="short-desc">Rugged Panel PCs for SCADA/MES and edge compute.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 12 -->
+    <div class="component-card" data-name="SCADA Systems" data-price="185000" data-type="hmi"
+      data-img="images/scada.jpg"
+      data-desc="Overview: Supervisory Control and Data Acquisition platforms for centralized monitoring, control, alarm management, and reporting. Technical: OPC UA/DA, drivers for PLCs/VFDs, redundancy, historian, web clients, security. Use Cases: Plant-wide visualization, utilities, infrastructure. Benefits: Single-pane visibility, auditability, and scalable enterprise integration.">
+      <img src="images/scada-system-architecture.jpg" alt="SCADA Systems" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,85,000</div>
+      <h3>SCADA Systems</h3>
+      <p class="short-desc">Plant-wide monitoring, control, and reporting.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- ================= Drives & Motion Control ================= -->
+    <!-- 13 -->
+    <div class="component-card" data-name="Variable Frequency Drives VFD Siemens SINAMICS" data-price="42000"
+      data-type="drives" data-img="images/sinamics-family.jpg"
+      data-desc="Overview: Siemens SINAMICS VFD portfolio for induction and synchronous motors across simple to high-performance use cases. Technical: STO safety on many models, energy-saving vector control, PROFINET/PROFIBUS options, integrated braking chopper on variants. Use Cases: Pumps, fans, conveyors, compressors. Benefits: Efficiency, flexible comms, global support.">
+      <img src="images/sinamics-variable-frequency-drives.jpg" alt="Variable Frequency Drives VFD Siemens SINAMICS"
+        class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹42,000</div>
+      <h3>Variable Frequency Drives VFD Siemens SINAMICS</h3>
+      <p class="short-desc">Energy-efficient VFD family for wide applications.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 14 -->
+    <div class="component-card" data-name="VFD SINAMICS G120" data-price="45000" data-type="drives"
+      data-img="images/vfd-g120.jpg"
+      data-desc="Overview: Modular, high-efficiency VFD with removable Control Unit and Power Module for flexible configuration. Technical: Advanced vector control, STO/SS1 safety options, PROFINET/PROFIBUS, braking chopper variants, energy optimizer. Use Cases: Conveyors, mixers, compressors. Benefits: Maintainability, scalability, and low OPEX.">
+      <img src="images/VFD SINAMICS G120.jpg" alt="VFD SINAMICS G120" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹45,000</div>
+      <h3>VFD SINAMICS G120</h3>
+      <p class="short-desc">Modular VFD with advanced safety & control.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 15 -->
+    <div class="component-card" data-name="VFD SINAMICS G120C" data-price="42000" data-type="drives"
+      data-img="images/vfd-g120c.jpg"
+      data-desc="Overview: Compact, cost-effective VFD with fast commissioning and integrated safety. Technical: Sensorless vector control, built-in I/O, PROFINET/PROFIBUS variants, energy-saving features. Use Cases: Fans, pumps, compressors. Benefits: Space-saving, economical, robust for OEMs.">
+      <img src="images/VFD SINAMICS G120C.jpg" alt="VFD SINAMICS G120C" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹42,000</div>
+      <h3>VFD SINAMICS G120C</h3>
+      <p class="short-desc">Compact VFD optimized for OEM applications.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 16 -->
+    <div class="component-card" data-name="VFD SINAMICS V20" data-price="30000" data-type="drives"
+      data-img="images/vfd-v20.jpg"
+      data-desc="Overview: Easy, economical VFD for basic applications with quick parameterization and reliable operation. Technical: Basic vector control, onboard I/O, integrated keypad, energy-saving modes. Use Cases: Simple conveyors, pumps, fans. Benefits: Low TCO, fast start-up, rugged design.">
+      <img src="images/VFD SINAMICS V20.jpg" alt="VFD SINAMICS V20" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹30,000</div>
+      <h3>VFD SINAMICS V20</h3>
+      <p class="short-desc">Entry-level VFD for straightforward motor control.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 17 -->
+    <div class="component-card" data-name="Servo Drives and Motors" data-price="98000" data-type="drives"
+      data-img="images/servo-drive.jpg"
+      data-desc="Overview: AC servo drives and matched motors for high-precision motion with fast response and positioning. Technical: EtherCAT/PROFINET options, absolute/incremental encoders, safety over fieldbus on variants, autotuning. Use Cases: Pick-and-place, robotics, CNC axes, packaging. Benefits: High accuracy, dynamic control, compact footprint.">
+      <img src="images/Servo Drives and Motors.jpg" alt="Servo Drives and Motors" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹98,000</div>
+      <h3>Servo Drives and Motors</h3>
+      <p class="short-desc">Precise, dynamic motion control packages.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 18 -->
+    <div class="component-card" data-name="Soft Starters" data-price="26000" data-type="drives"
+      data-img="images/soft-starter.jpg"
+      data-desc="Overview: Solid-state soft starters reduce inrush current and mechanical stress on motors during startup. Technical: Ramp-up/ramp-down control, current limit, built-in bypass on models, motor protection features. Use Cases: Pumps, compressors, conveyors. Benefits: Extended motor life, reduced voltage dips, lower maintenance.">
+      <img src="images/Soft Starters.jpg" alt="Soft Starters" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹26,000</div>
+      <h3>Soft Starters</h3>
+      <p class="short-desc">Controlled motor starting to protect assets.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 19 -->
+    <div class="component-card" data-name="Stepper Motors and Controllers" data-price="24000" data-type="drives"
+      data-img="images/stepper.jpg"
+      data-desc="Overview: Stepper motors with microstepping controllers for cost-effective position control. Technical: NEMA sizes, closed-loop options, pulse/direction and fieldbus interfaces, holding torque variants. Use Cases: Indexing tables, labelers, small automation fixtures. Benefits: Simple control, accurate incremental steps, economical.">
+      <img src="images/Stepper Motors and Controllers 1.jpg" alt="Stepper Motors and Controllers" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹24,000</div>
+      <h3>Stepper Motors and Controllers</h3>
+      <p class="short-desc">Economical positioning solutions with steppers.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- ================= Power & Distribution ================= -->
+    <!-- 20 -->
+    <div class="component-card" data-name="24V DC Power Supplies Siemens SITOP" data-price="8500" data-type="power"
+      data-img="images/sitop.jpg"
+      data-desc="Overview: SITOP industrial power supplies provide stable 24 VDC with high MTBF and robust protection against mains fluctuations. Technical: Wide-range input, overload/short-circuit protection, redundancy modules and buffer solutions. Use Cases: PLC panels, machine tools, process skids. Benefits: High availability, compact design, global approvals.">
+      <img src="images/24V DC Power Supplies Siemens SITOP.jpg" alt="24V DC Power Supplies Siemens SITOP"
+        class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹8,500</div>
+      <h3>24V DC Power Supplies Siemens SITOP</h3>
+      <p class="short-desc">Reliable 24 VDC supplies for control panels.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 21 -->
+    <div class="component-card" data-name="MCB, MCCB, RCCB breakers" data-price="1800" data-type="power"
+      data-img="images/breakers.jpg"
+      data-desc="Overview: Protective circuit breakers for overload, short-circuit, and residual current protection. Technical: Curve types B/C/D, ranges from miniature (MCB) to molded case (MCCB) with adjustable trips; RCCB for earth leakage protection. Use Cases: Distribution boards, motor feeders, safety circuits. Benefits: Standards compliance, reliable protection, easy panel integration.">
+      <img src="images/MCB, MCCB, RCCB breakers.jpg" alt="MCB, MCCB, RCCB breakers" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,800</div>
+      <h3>MCB, MCCB, RCCB breakers</h3>
+      <p class="short-desc">Comprehensive circuit protection devices.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 22 -->
+    <div class="component-card" data-name="Fuse Holders and Fuses" data-price="450" data-type="power"
+      data-img="images/fuse-holders.jpg"
+      data-desc="Overview: DIN-rail and panel-mount fuse holders with matching industrial fuses for equipment and control circuits. Technical: Class gG/aM fuses, disconnect type holders, visual indicators, finger-safe designs. Use Cases: Branch protection, control transformers, instrumentation loops. Benefits: Fast fault clearing, compact and safe installation.">
+      <img src="images/Fuse Holders and Fuses.jpg" alt="Fuse Holders and Fuses" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹450</div>
+      <h3>Fuse Holders and Fuses</h3>
+      <p class="short-desc">Safe, compact fuse protection assemblies.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 23 -->
+    <div class="component-card" data-name="Busbars and Terminal Blocks" data-price="1200" data-type="power"
+      data-img="images/busbar-terminal.jpg"
+      data-desc="Overview: Power distribution busbars and DIN-rail terminal blocks for neat, safe wiring. Technical: Copper/aluminum bars, insulated carriers, screw/spring clamp terminals, jumpers and markers. Use Cases: Control panels, MCCs, junction boxes. Benefits: Reduced wiring time, clear labeling, robust connections.">
+      <img src="images/Busbars And Terminals.jpg" alt="Busbars and Terminal Blocks" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,200</div>
+      <h3>Busbars and Terminal Blocks</h3>
+      <p class="short-desc">Reliable distribution and connection hardware.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- ================= Sensors & Field Devices ================= -->
+    <!-- 24 -->
+    <div class="component-card" data-name="Proximity Sensors Inductive, Capacitive" data-price="950" data-type="sensors"
+      data-img="images/proximity.jpg"
+      data-desc="Overview: Non-contact sensing of metal (inductive) or non-metal (capacitive) objects with robust housings and high IP ratings. Technical: M8–M30 sizes, PNP/NPN, NO/NC, shielded/unshielded, flush/non-flush, 10–30 VDC. Use Cases: Position sensing, level detection, counting. Benefits: Long life, fast response, maintenance-free.">
+      <img src="images/Proximity Sensors Inductive, Capacitive.jpg" alt="Proximity Sensors Inductive, Capacitive"
+        class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹950</div>
+      <h3>Proximity Sensors Inductive, Capacitive</h3>
+      <p class="short-desc">Durable non-contact sensors for detection tasks.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 25 -->
+    <div class="component-card" data-name="Photoelectric Sensors" data-price="1250" data-type="sensors"
+      data-img="images/photoelectric.jpg"
+      data-desc="Overview: Through-beam, retro-reflective, and diffuse photoelectric sensors for object detection with high switching frequencies. Technical: Red/infrared/laser variants, adjustable sensitivity, background suppression. Use Cases: Packaging, conveyor jam detection, counting. Benefits: Long sensing ranges, easy alignment, reliable operation.">
+      <img src="images/Photoelectric Sensors.jpg" alt="Photoelectric Sensors" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,250</div>
+      <h3>Photoelectric Sensors</h3>
+      <p class="short-desc">Versatile optical sensors for fast detection.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 26 -->
+    <div class="component-card" data-name="Ultrasonic Sensors" data-price="3800" data-type="sensors"
+      data-img="images/ultrasonic.jpg"
+      data-desc="Overview: Ultrasonic distance and presence sensors immune to color/transparency variations. Technical: Analog/IO-Link outputs, wide operating ranges, teach-in buttons. Use Cases: Level measurement, web loop control, presence in dusty environments. Benefits: Robust in challenging conditions, precise measurement.">
+      <img src="images/Ultrasonic Sensors.jpg" alt="Ultrasonic Sensors" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹3,800</div>
+      <h3>Ultrasonic Sensors</h3>
+      <p class="short-desc">Accurate distance sensing independent of color/shine.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 27 -->
+    <div class="component-card" data-name="Encoders Rotary, Linear" data-price="6400" data-type="sensors"
+      data-img="images/encoders.jpg"
+      data-desc="Overview: Incremental and absolute encoders for position/velocity feedback in automation and motion axes. Technical: Shaft/hollow-shaft, SSI/BiSS/PROFINET/IO-Link options, high pulse counts, rugged IP ratings. Use Cases: Conveyor speed feedback, servo axes, roll diameter. Benefits: High resolution, long bearing life, robust interfaces.">
+      <img src="images/Encoders Rotary, Linear.jpg" alt="Encoders Rotary, Linear" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹6,400</div>
+      <h3>Encoders Rotary, Linear</h3>
+      <p class="short-desc">Precision feedback for speed and position control.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 28 -->
+    <div class="component-card" data-name="Temperature Sensors RTD, Thermocouples" data-price="1100" data-type="sensors"
+      data-img="images/temperature.jpg"
+      data-desc="Overview: Industrial RTDs (Pt100/Pt1000) and thermocouples for accurate temperature monitoring. Technical: Sheath types, connection heads, spring-loaded assemblies, transmitters (4–20 mA/HART) optional. Use Cases: Process temperature, HVAC ducts, bearing monitoring. Benefits: Stable accuracy, interchangeable designs, wide range.">
+      <img src="images/Temperature Sensors RTD, Thermocouples.jpg" alt="Temperature Sensors RTD, Thermocouples"
+        class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,100</div>
+      <h3>Temperature Sensors RTD, Thermocouples</h3>
+      <p class="short-desc">Accurate temperature measurement for industry.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 29 -->
+    <div class="component-card" data-name="Flow and Pressure Sensors" data-price="5800" data-type="sensors"
+      data-img="images/flow-pressure.jpg"
+      data-desc="Overview: Electronic flow and pressure transmitters/switches for liquids and gases. Technical: 4–20 mA/IO-Link outputs, stainless steel wetted parts, display options, high repeatability. Use Cases: Pump monitoring, pneumatic systems, CIP/SIP lines. Benefits: Precise process feedback, compact integration.">
+      <img src="images/Flow and Pressure Sensors.jpg" alt="Flow and Pressure Sensors" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹5,800</div>
+      <h3>Flow and Pressure Sensors</h3>
+      <p class="short-desc">Reliable process feedback for flow and pressure.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- ================= Switchgear & Control Devices ================= -->
+    <!-- 30 -->
+    <div class="component-card" data-name="Contactors" data-price="1450" data-type="switchgear"
+      data-img="images/contactors.jpg"
+      data-desc="Overview: AC/DC contactors for motor, heater, and power switching with auxiliary contact options. Technical: Coil voltages across ranges, AC-3 ratings, mechanical interlocks, surge suppressors. Use Cases: DOL/Star-Delta starters, control panels, OEM machines. Benefits: High electrical life, modular accessories, easy DIN-rail mounting.">
+      <img src="images/contactors.jpg" alt="Contactors" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,450</div>
+      <h3>Contactors</h3>
+      <p class="short-desc">Robust power switching for motors and loads.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 31 -->
+    <div class="component-card" data-name="Overload Relays" data-price="1250" data-type="switchgear"
+      data-img="images/overload-relays.jpg"
+      data-desc="Overview: Thermal/electronic overload relays to protect motors against overcurrent and phase loss. Technical: Adjustable current ranges, manual/auto reset, test/stop functions, trip indication. Use Cases: Motor feeders with contactors and breakers. Benefits: Reliable protection, quick setup, reduces motor failures.">
+      <img src="images/Overload Relays.jpg" alt="Overload Relays" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,250</div>
+      <h3>Overload Relays</h3>
+      <p class="short-desc">Motor protection relays with adjustable ranges.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 32 -->
+    <div class="component-card" data-name="Solid State Relays" data-price="1650" data-type="switchgear"
+      data-img="images/ssr.jpg"
+      data-desc="Overview: SSRs provide silent, fast, and wear-free switching for resistive/inductive loads. Technical: Zero-cross or random-turn-on types, heat-sink options, control 3–32 VDC, load up to hundreds of amps (with models). Use Cases: Heaters, lamps, fast cycling loads. Benefits: Long life, high reliability, no contact bounce.">
+      <img src="images/Solid State Relays.jpeg" alt="Solid State Relays" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹1,650</div>
+      <h3>Solid State Relays</h3>
+      <p class="short-desc">Wear-free switching for high-cycle applications.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 33 -->
+    <div class="component-card" data-name="Push Buttons Start, Stop, Reset" data-price="180" data-type="switchgear"
+      data-img="images/push-buttons.jpg"
+      data-desc="Overview: Industrial push buttons with mushroom/flush operators for start/stop/reset and custom functions. Technical: 22/30 mm, IP65/67 fronts, LED illumination, modular contact blocks. Use Cases: Operator stations, panels, HMIs. Benefits: Ergonomic, durable, easy legend marking.">
+      <img src="images/Push Buttons Start, Stop, Reset.jpg" alt="Push Buttons" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹180</div>
+      <h3>Push Buttons Start, Stop, Reset</h3>
+      <p class="short-desc">Industrial operators for control stations.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 34 -->
+    <div class="component-card" data-name="Selector Switches" data-price="220" data-type="switchgear"
+      data-img="images/selector-switch.jpg"
+      data-desc="Overview: Key/lever selector switches for mode selection with maintained or spring-return actions. Technical: 2/3-position, IP65/67 fronts, modular contact blocks, illumination options. Use Cases: Auto/Manual/Off control, jog/hand modes. Benefits: Clear status, robust mechanics, lockable variants.">
+      <img src="images/Selector Switches.jpg" alt="Selector Switches" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹220</div>
+      <h3>Selector Switches</h3>
+      <p class="short-desc">Mode selection switches for panels and MCCs.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 35 -->
+    <div class="component-card" data-name="Pilot Lights and Indicators" data-price="160" data-type="switchgear"
+      data-img="images/pilot-lights.jpg"
+      data-desc="Overview: Bright LED pilot lights/indicators for status visualization with long service life. Technical: Multi-voltage modules, colors (R/Y/G/B/W), IP65/67 fronts, buzzer beacons on variants. Use Cases: Panel status, alarms, running/stop. Benefits: High visibility, low power, maintenance-free.">
+      <img src="images/Pilot Lights and Indicators.jpg" alt="Pilot Lights and Indicators" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹160</div>
+      <h3>Pilot Lights and Indicators</h3>
+      <p class="short-desc">High-visibility indicators for operator panels.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 36 -->
+    <div class="component-card" data-name="Emergency Stop Buttons" data-price="420" data-type="switchgear"
+      data-img="images/emergency-stop.jpg"
+      data-desc="Overview: Safety-rated emergency stop (E-Stop) operators with latching mushroom heads. Technical: Twist-release/key release variants, direct opening action contacts, IP65/67 fronts, EN ISO 13850 compliant. Use Cases: Machine stop circuits, safety panels. Benefits: Fail-safe design, high reliability under stress.">
+      <img src="images/Emergency Stop Buttons.jpg" alt="Emergency Stop Buttons" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹420</div>
+      <h3>Emergency Stop Buttons</h3>
+      <p class="short-desc">Safety E-Stops with direct opening action.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- ================= Safety Automation ================= -->
+    <!-- 37 -->
+    <div class="component-card" data-name="Safety Relays" data-price="6900" data-type="safety"
+      data-img="images/safety-relay.jpg"
+      data-desc="Overview: Dedicated safety relays for monitoring E-Stops, gates, and light curtains to achieve PL e / SIL 3 safety levels. Technical: Dual-channel inputs, force-guided contacts, EDM, manual/auto reset, diagnostics LEDs. Use Cases: Machine safety functions per ISO 13849. Benefits: Certified safety, easy wiring, predictable behavior.">
+      <img src="images/Safety Relays.jpg" alt="Safety Relays" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹6,900</div>
+      <h3>Safety Relays</h3>
+      <p class="short-desc">Certified relays for machine safety circuits.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 38 -->
+    <div class="component-card" data-name="Light Curtains" data-price="18500" data-type="safety"
+      data-img="images/light-curtain.jpg"
+      data-desc="Overview: Safety light curtains create protective fields for operator safety without physical guards. Technical: Type 2/4 per IEC 61496, resolutions for finger/hand/body, muting and blanking, ranges up to 20 m+. Use Cases: Presses, palletizers, access protection. Benefits: Fast stop detection, flexible layouts, minimal obstruction.">
+      <img src="images/light curtains.jpg" alt="Light Curtains" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹18,500</div>
+      <h3>Light Curtains</h3>
+      <p class="short-desc">Non-contact protective fields for safety zones.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 39 -->
+    <div class="component-card" data-name="Safety Mats" data-price="16500" data-type="safety"
+      data-img="images/safety-mat.jpg"
+      data-desc="Overview: Pressure-sensitive safety mats detect personnel presence in hazardous areas, triggering safe stop. Technical: Rugged wear-resistant surfaces, customizable shapes, edge trim sets, safety relay compatibility. Use Cases: Robot cells, press brakes, assembly lines. Benefits: Durable, simple integration, reliable detection.">
+      <img src="images/Safety Mats.jpg" alt="Safety Mats" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹16,500</div>
+      <h3>Safety Mats</h3>
+      <p class="short-desc">Presence-sensing floor mats for safe access.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 40 -->
+    <div class="component-card" data-name="Emergency Pull Cord Switches" data-price="5200" data-type="safety"
+      data-img="images/pull-cord.jpg"
+      data-desc="Overview: Rope-pull emergency stop switches for long conveyor lines providing immediate shutdown along the length. Technical: Long actuation distances, reset latches, status indicators, rugged housings. Use Cases: Conveyors, bulk handling, packaging lines. Benefits: Continuous access to E-Stop, quick recovery.">
+      <img src="images/Emergency Pull Cord Switches.jpg" alt="Emergency Pull Cord Switches" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹5,200</div>
+      <h3>Emergency Pull Cord Switches</h3>
+      <p class="short-desc">E-Stop along conveyors via rope-pull switches.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 41 -->
+    <div class="component-card" data-name="Interlock Switches" data-price="3200" data-type="safety"
+      data-img="images/interlock.jpg"
+      data-desc="Overview: Guard door interlock switches with tongue/hinge designs and solenoid locking to prevent access while hazards persist. Technical: Coded actuators, IP67, safety contacts, diagnostic outputs. Use Cases: Machine guards, robot cells, packaging machines. Benefits: High tamper resistance, safety compliance.">
+      <img src="images/Interlock Switches.jpg" alt="Interlock Switches" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹3,200</div>
+      <h3>Interlock Switches</h3>
+      <p class="short-desc">Guard door safety interlocks and solenoid locks.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- ================= Industrial Networking ================= -->
+    <!-- 42 -->
+    <div class="component-card" data-name="Industrial Ethernet Switches" data-price="7800" data-type="networking"
+      data-img="images/ethernet-switch.jpg"
+      data-desc="Overview: Unmanaged/managed industrial switches for deterministic and resilient control networks. Technical: DIN-rail metal housings, wide temp, redundant power inputs, QoS/VLAN on managed units, ring protocols (MRP/ERPS) on variants. Use Cases: PLC cells, SCADA backbones, drive networks. Benefits: High availability, easy deployment, robust EMI immunity.">
+      <img src="images/Industrial Ethernet Switches.jpg" alt="Industrial Ethernet Switches" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹7,800</div>
+      <h3>Industrial Ethernet Switches</h3>
+      <p class="short-desc">Rugged switches for reliable control networking.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 43 -->
+    <div class="component-card" data-name="Wireless Communication Modules" data-price="9600" data-type="networking"
+      data-img="images/wireless.jpg"
+      data-desc="Overview: Industrial Wi-Fi/LTE gateways for remote access and telemetry. Technical: Dual-SIM on LTE variants, VPN, firewall, serial/Ethernet bridging, antenna diversity, rugged enclosures. Use Cases: Remote pumping stations, mobile assets, temporary sites. Benefits: Secure remote connectivity, rapid deployment, reduced site visits.">
+      <img src="images/Wireless Communication Modules.jpg" alt="Wireless Communication Modules" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹9,600</div>
+      <h3>Wireless Communication Modules</h3>
+      <p class="short-desc">Secure wireless bridges for PLC/SCADA access.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 44 -->
+    <div class="component-card" data-name="Fieldbus Gateways" data-price="11500" data-type="networking"
+      data-img="images/gateway.jpg"
+      data-desc="Overview: Protocol gateways bridging legacy and modern buses (Modbus, PROFIBUS, PROFINET, Ethernet/IP, CAN). Technical: Dual-port designs, powerful mapping tools, diagnostics, DIN-rail mounting. Use Cases: Brownfield upgrades, multi-vendor interoperability. Benefits: Extend equipment life, reduce integration time.">
+      <img src="images/Fieldbus Gateways.jpg" alt="Fieldbus Gateways" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹11,500</div>
+      <h3>Fieldbus Gateways</h3>
+      <p class="short-desc">Seamless protocol conversion between systems.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 45 -->
+    <div class="component-card" data-name="Network Cables and Connectors" data-price="250" data-type="networking"
+      data-img="images/network-cables.jpg"
+      data-desc="Overview: Industrial-grade Ethernet cables, M12/RJ45 connectors, and patch cords for robust networking. Technical: Cat5e/Cat6, PUR/PVC/TPU jackets, shielded pairs, PoE support, molded strain relief. Use Cases: Machine wiring, outdoor runs (UV-resistant types), panel patching. Benefits: Reliable performance, minimized noise, long service life.">
+      <img src="images/Network Cables and Connectors.jpg" alt="Network Cables and Connectors" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹250</div>
+      <h3>Network Cables and Connectors</h3>
+      <p class="short-desc">Industrial Ethernet cabling & terminations.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- ================= Panel Accessories & Wiring ================= -->
+    <!-- 46 -->
+    <div class="component-card" data-name="Control Cables Single-core, Multi-core" data-price="55" data-type="panel"
+      data-img="images/control-cable.jpg"
+      data-desc="Overview: Flexible single-core and multi-core control cables for panel and field wiring. Technical: PVC/XLPE insulation, tinned copper options, shielding, numbering, high-flex types. Use Cases: Control circuits, encoder/sensor lines, VFD control. Benefits: Easy stripping, durable jackets, clean routing.">
+      <img src="images/Control Cables Single-core, Multi-core.jpg" alt="Control Cables Single-core, Multi-core"
+        class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹55 / m</div>
+      <h3>Control Cables Single-core, Multi-core</h3>
+      <p class="short-desc">Flexible cables for control and signal wiring.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 47 -->
+    <div class="component-card" data-name="Cable Ducts and Trays" data-price="380" data-type="panel"
+      data-img="images/cable-duct.jpg"
+      data-desc="Overview: Slotted PVC ducts and metal trays for structured cable management. Technical: Flame-retardant materials, finger design for easy breakout, cover retention, multiple widths/heights. Use Cases: Control panels, MCCs, wiring closets. Benefits: Neat wiring, improved airflow, fast changes.">
+      <img src="images/Cable Ducts and Trays.jpg" alt="Cable Ducts and Trays" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹380 / m</div>
+      <h3>Cable Ducts and Trays</h3>
+      <p class="short-desc">Organized routing for panel wiring harnesses.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 48 -->
+    <div class="component-card" data-name="Ferrules and Markers" data-price="0.8" data-type="panel"
+      data-img="images/ferrules.jpg"
+      data-desc="Overview: Wire ferrules and markers for professional terminations and identification. Technical: DIN color-coded ferrules, heat-shrink/clip-on markers, printer-ready labels. Use Cases: Panel terminations, field service kits. Benefits: Reliable connections, fast troubleshooting, tidy panels.">
+      <img src="images/Ferrules and Markers.jpg" alt="Ferrules and Markers" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹0.80 each</div>
+      <h3>Ferrules and Markers</h3>
+      <p class="short-desc">Professional terminations & clear wire IDs.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 49 -->
+    <div class="component-card" data-name="Cable Glands and Bushings" data-price="25" data-type="panel"
+      data-img="images/cable-gland.jpg"
+      data-desc="Overview: IP-rated glands/bushings for secure cable entry with strain relief. Technical: Metric/PG threads, brass/nylon/stainless, sealing inserts, EMC variants. Use Cases: Control panels, outdoor enclosures, hygienic designs. Benefits: Ingress protection, EMC integrity, tidy entries.">
+      <img src="images/Cable Glands and Bushings.jpg" alt="Cable Glands and Bushings" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹25</div>
+      <h3>Cable Glands and Bushings</h3>
+      <p class="short-desc">Sealed, strain-relieved cable entries for panels.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 50 -->
+    <div class="component-card" data-name="Cooling Fans and Vent Filters" data-price="950" data-type="panel"
+      data-img="images/fans-filters.jpg"
+      data-desc="Overview: Panel cooling fans with replaceable vent filters to maintain enclosure temperature and cleanliness. Technical: Ball-bearing fans, IP rated grilles, filter media, thermostats. Use Cases: Drives/PLC cabinets, electronics enclosures. Benefits: Extended component life, reduced thermal derating.">
+      <img src="images/Cooling Fans and Vent Filters.jpg" alt="Cooling Fans and Vent Filters" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹950</div>
+      <h3>Cooling Fans and Vent Filters</h3>
+      <p class="short-desc">Thermal management accessories for enclosures.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 51 -->
+    <div class="component-card" data-name="Enclosures and Cabinets Wall-mounted, Floor-standing" data-price="7800"
+      data-type="panel" data-img="images/enclosures.jpg"
+      data-desc="Overview: Wall-mount and floor-standing enclosures for industrial control systems. Technical: Powder-coated steel/stainless, IP54–IP66, gland plates, mounting plates, accessories (lights, heaters). Use Cases: Control panels, MCCs, outdoor kiosks. Benefits: Rugged protection, clean aesthetics, flexible sizing.">
+      <img src="images/Enclosures and Cabinets Wall-mounted, Floor-standing.jpg"
+        alt="Enclosures and Cabinets Wall-mounted, Floor-standing" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹7,800</div>
+      <h3>Enclosures and Cabinets Wall-mounted, Floor-standing</h3>
+      <p class="short-desc">Industrial enclosures with high IP protection.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    <!-- 52 -->
+    <div class="component-card" data-name="Panel Painting and Powder Coating" data-price="2200" data-type="panel"
+      data-img="images/powder-coating.jpg"
+      data-desc="Overview: Industrial panel painting and powder-coating services for corrosion resistance and professional finish. Technical: RAL color options, surface prep, oven-cured coatings, salt-spray tested finishes. Use Cases: OEM panels, retrofit upgrades, branding. Benefits: Durable finish, clean presentation, environmental resistance.">
+      <img src="images/Panel Painting and Powder Coating.jpg" alt="Panel Painting and Powder Coating" class="thumb-img">
+      <div class="price"><span class="price-label">Price:</span> ₹2,200</div>
+      <h3>Panel Painting and Powder Coating</h3>
+      <p class="short-desc">Durable coatings and custom color finishes.</p>
+      <button class="view-details-btn">View Details</button>
+      <button class="add-cart-btn">Add to Cart</button>
+    </div>
+    
+
+  </div><!-- /componentsContainer -->
+
+  <!-- Product Details Modal -->
+  <div id="detailsModal" class="modal" role="dialog" aria-labelledby="modalName" aria-describedby="modalDesc"
+    aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" id="closeModal" aria-label="Close Product Details">&times;</button>
+      <figure>
+        <img id="modalImage" src="" alt="Product image" />
+        <figcaption id="modalName"></figcaption>
+      </figure>
+      <p class="price" id="modalPrice"><span class="price-label">Price:</span> </p>
+      <div class="modal-desc-container">
+        <p id="modalDesc"></p>
+      </div>
+      <button class="add-cart-btn" id="modalAddCart" aria-label="Add product to cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal" role="dialog" aria-labelledby="cartTitle" aria-describedby="cartItems"
+    aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" id="closeCart" aria-label="Close Cart">&times;</button>
+      <h2 id="cartTitle">Your Cart</h2>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-summary">
+        <p>Subtotal: <span id="subtotal">₹0</span></p>
+        <p>GST (18%): <span id="gst">₹0</span></p>
+        <p class="total">Total: <span id="total">₹0</span></p>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn" aria-label="Proceed to checkout">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

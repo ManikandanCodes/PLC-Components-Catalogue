@@ -54,7 +54,6 @@ nav img {
 
 nav h1 {
   display: none;
-  /* Hidden, use company-info instead */
 }
 
 #searchBox {
@@ -135,15 +134,13 @@ nav h1 {
   z-index: 1;
 }
 
-/* ========================= */
 
-/* Allow nav items to wrap to a second line */
 nav {
   flex-wrap: wrap;
   padding-bottom: 16px;
 }
 
-/* Show and style the H1 so it appears on a new line */
+
 nav h1 {
   display: block;
   width: 100%;
@@ -162,7 +159,6 @@ nav h1 {
   order: 2;
 }
 
-/* Optional responsiveness */
 @media (max-width: 720px) {
   #searchBox {
     width: 100%;
@@ -402,7 +398,7 @@ nav h1 {
   word-break: break-word;
 }
 
-/* Overview highlight: shadow/glow, no underline */
+
 #detailsModal .overview-heading,
 #detailsModal .overview-tab {
   display: inline-block;
@@ -712,4 +708,5 @@ nav h1 {
 
 body.modal-open {
   overflow: hidden;
+
 }

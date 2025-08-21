@@ -1,28 +1,28 @@
 
 
 (function () {
-  // Elements
+  
   const itemBody = document.getElementById('itemBody');
   const addRowBtn = document.getElementById('addRow');
   const subEl = document.getElementById('subTotal');
   const gstEl = document.getElementById('gstAmt');
   const grandEl = document.getElementById('grandTotal');
 
-  // Buttons
+  
   const previewBtn = document.getElementById('previewBtn');
   const downloadBtn = document.getElementById('downloadBtn');
 
-  // Meta inputs
+  
   const invNo = document.getElementById('invNo');
   const invDate = document.getElementById('invDate');
   const dueDate = document.getElementById('dueDate');
 
-  // Meta print mirrors
+  
   const invNoPrint = document.getElementById('invNoPrint');
   const invDatePrint = document.getElementById('invDatePrint');
   const dueDatePrint = document.getElementById('dueDatePrint');
 
-  // Buyer fields + print mirrors
+  
   const buyerName = document.getElementById('buyerName');
   const buyerAddr = document.getElementById('buyerAddr');
   const buyerGstin = document.getElementById('buyerGstin');
@@ -73,7 +73,7 @@
     }
   }
 
-  // Mirrors
+  
   function syncBuyerPrint() {
     if (buyerNamePrint) buyerNamePrint.textContent = buyerName?.value || '';
     if (buyerAddrPrint) buyerAddrPrint.textContent = buyerAddr?.value || '';
@@ -159,7 +159,7 @@
       recompute();
     });
 
-    recalc(); // initial
+    recalc(); 
   }
 
   function renumber() {
@@ -183,7 +183,6 @@
   }
 
   function prefillDefaults() {
-    // Invoice meta defaults
     if (invNo) invNo.value = genInvoiceNumber();
     const today = new Date();
     if (invDate) invDate.valueAsDate = today;
@@ -193,7 +192,6 @@
 
     syncMetaPrint();
 
-    // Items from cart (if any)
     const incoming = decodeCartFromUrl();
     if (incoming.length) {
       incoming.forEach((it) =>
@@ -203,10 +201,10 @@
       addRow();
     }
 
-    syncBuyerPrint(); // initial mirrors
+    syncBuyerPrint(); 
   }
 
-  // Preview & Print (system dialog)
+
   if (previewBtn) {
     previewBtn.addEventListener('click', () => {
       syncMetaPrint();
@@ -215,16 +213,15 @@
     });
   }
 
-  // Direct, silent download using html2pdf.js (no preview, no new window)
   if (downloadBtn) {
     downloadBtn.addEventListener('click', async () => {
-      // Ensure mirrors are current before capture
+  
       syncMetaPrint();
       syncBuyerPrint();
 
       const target = document.querySelector('.invoice-wrap');
 
-      // Build filename
+    
       const today = new Date();
       const y = today.getFullYear();
       const m = String(today.getMonth() + 1).padStart(2, '0');
@@ -232,14 +229,14 @@
       const num = (invNo?.value || 'Invoice').trim().replace(/\s+/g, '-');
       const filename = `${num}-${y}${m}${d}.pdf`;
 
-      // Improve color fidelity for rasterization
+      
       target.style.webkitPrintColorAdjust = 'exact';
       target.style.printColorAdjust = 'exact';
 
       if (typeof html2pdf !== 'undefined') {
         const opt = {
           margin: [10, 10, 10, 10],
-          // filename is not used for Blob path, but kept for compatibility
+    
           filename,
           image: { type: 'jpeg', quality: 0.98 },
           html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
@@ -248,13 +245,13 @@
         };
 
         try {
-          // Create worker but DO NOT call .save() (it may show a dialog)
+        
           const worker = html2pdf().set(opt).from(target);
 
-          // Generate Blob silently
+      
           const pdfBlob = await worker.output('blob');
 
-          // Trigger a download via a hidden anchor
+      
           const url = URL.createObjectURL(pdfBlob);
           const a = document.createElement('a');
           a.href = url;
@@ -272,9 +269,9 @@
     });
   }
 
-  // Add row handler
   addRowBtn.addEventListener('click', () => addRow());
 
   // Initialize
   prefillDefaults();
+
 })();

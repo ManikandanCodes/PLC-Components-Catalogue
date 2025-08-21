@@ -1,4 +1,4 @@
-/* ===================== PRODUCT DETAILS MODAL ===================== */
+
 const detailsModal = document.getElementById('detailsModal');
 const modalImage = document.getElementById('modalImage');
 const modalName = document.getElementById('modalName');
@@ -9,7 +9,7 @@ const modalAddCartBtn = document.getElementById('modalAddCart');
 
 let currentProduct = null;
 
-// Show product details in modal
+
 function showProductDetails(card) {
   currentProduct = {
     name: card.getAttribute('data-name'),
@@ -25,7 +25,7 @@ function showProductDetails(card) {
   modalName.textContent = currentProduct.name;
   modalPrice.innerHTML = `Price: ₹${currentProduct.price.toLocaleString('en-IN')}`;
 
-  // Keep description left-aligned and readable
+  
   let descHtml = currentProduct.desc.replace(/(Overview:)/i, '$1');
   modalDesc.innerHTML = descHtml;
   modalDesc.classList.add('modal-desc-align');
@@ -34,7 +34,7 @@ function showProductDetails(card) {
   document.body.classList.add('modal-open');
 }
 
-// Close details modal
+
 function closeDetailsModal() {
   detailsModal.classList.remove('active');
   document.body.classList.remove('modal-open');
@@ -45,7 +45,7 @@ window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && detailsModal.classList.contains('active')) closeDetailsModal();
 });
 
-// Keep modal image in sync with card thumbnail changes
+
 const observer = new MutationObserver(() => {
   if (!currentProduct) return;
   const card = Array.from(document.querySelectorAll('.component-card'))
@@ -60,14 +60,14 @@ document.querySelectorAll('.component-card .thumb-img').forEach(img => {
   observer.observe(img, { attributes: true, attributeFilter: ['src'] });
 });
 
-// Add to cart from product modal
+
 modalAddCartBtn && modalAddCartBtn.addEventListener('click', () => {
   if (!currentProduct) return;
   addToCart({ name: currentProduct.name, price: currentProduct.price, img: currentProduct.img });
   closeDetailsModal();
 });
 
-/* ===================== SEARCH & FILTER LOGIC ===================== */
+
 const searchBox = document.getElementById('searchBox');
 const filterSelect = document.getElementById('filterSelect');
 const componentCards = document.querySelectorAll('.component-card');
@@ -79,12 +79,12 @@ function filterAndSearch() {
   componentCards.forEach(card => {
     const name = (card.getAttribute('data-name') || '').toLowerCase();
     const type = card.getAttribute('data-type');
-    // Check filter
+    
     const matchesFilter = (filterValue === 'all') || (type === filterValue);
-    // Check search term
+    
     const matchesSearch = name.includes(searchTerm);
 
-    // Show card if both match
+
     if (matchesFilter && matchesSearch) {
       card.style.display = '';
     } else {
@@ -96,7 +96,6 @@ function filterAndSearch() {
 if (searchBox) searchBox.addEventListener('input', filterAndSearch);
 if (filterSelect) filterSelect.addEventListener('change', filterAndSearch);
 
-/* ===================== CART MODAL AND LOGIC ===================== */
 const cartBtn = document.getElementById('cartBtn');
 const cartBadge = document.getElementById('cartBadge');
 const cartModal = document.getElementById('cartModal');
@@ -112,7 +111,7 @@ let cart = [];
 
 window.getCart = () => cart;
 
-// Toggle cart modal
+
 cartBtn && cartBtn.addEventListener('click', () => {
   cartModal.classList.add('active');
   document.body.classList.add('modal-open');
@@ -127,7 +126,7 @@ function closeCartModal() {
   document.body.classList.remove('modal-open');
 }
 
-// Add product to cart, increment qty if exists
+
 function addToCart(product) {
   const found = cart.find(item => item.name === product.name);
   if (found) {
@@ -144,7 +143,6 @@ function addToCart(product) {
   showCartBadge();
 }
 
-// Show/hide and update the cart badge
 function showCartBadge() {
   const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
   if (totalQty > 0) {
@@ -196,7 +194,7 @@ function updateCartDisplay() {
   gstSpan.textContent = `₹${gst.toLocaleString('en-IN', { maximumFractionDigits: 2 })}`;
   totalSpan.textContent = `₹${total.toLocaleString('en-IN', { maximumFractionDigits: 2 })}`;
 
-  // Wire qty and remove buttons
+  
   cartItemsDiv.querySelectorAll('.dec').forEach(b => b.addEventListener('click', (e) => {
     const i = Number(e.currentTarget.dataset.idx);
     cart[i].qty = Math.max(1, cart[i].qty - 1);
@@ -219,7 +217,6 @@ function updateCartDisplay() {
   }));
 }
 
-/* ===================== HOOK ALL "ADD TO CART" BUTTONS ===================== */
 document.querySelectorAll('.component-card .add-cart-btn').forEach(btn => {
   btn.addEventListener('click', (e) => {
     const card = e.currentTarget.closest('.component-card');
@@ -240,7 +237,6 @@ document.querySelectorAll('.component-card .view-details-btn').forEach(btn => {
   });
 });
 
-/* ===================== CHECKOUT → OPEN BILL PAGE WITH CART ===================== */
 function encodeCartForUrl(items) {
   try {
     const json = JSON.stringify(items.map(it => ({
@@ -248,7 +244,7 @@ function encodeCartForUrl(items) {
       price: Number(it.price) || 0,
       qty: Number(it.qty) || 1
     })));
-    // Base64-url encoding
+    
     const b64 = btoa(unescape(encodeURIComponent(json)))
       .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/,'');
     return b64;
@@ -262,11 +258,12 @@ checkoutBtn && checkoutBtn.addEventListener('click', () => {
   const payload = encodeCartForUrl(cartSnapshot);
   const url = payload ? `Bill/Bill.html#cart=${payload}` : `Bill/Bill.html`;
 
-  // Close cart modal (optional)
+
   if (cartModal && cartModal.classList.contains('active')) {
     cartModal.classList.remove('active');
     document.body.classList.remove('modal-open');
   }
-  // Open invoice page
+  
   window.open(url, '_blank'); 
+
 });

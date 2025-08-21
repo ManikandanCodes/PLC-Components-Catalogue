@@ -1,4 +1,4 @@
-/* Base */
+
 body {
   font-family: Inter, Segoe UI, Arial, sans-serif;
   color: #222;
@@ -12,7 +12,7 @@ body {
   padding: 12px 16px;
 }
 
-/* Header layout: seller left, meta right */
+
 .invoice-head {
   display: flex;
   justify-content: space-between;
@@ -49,7 +49,7 @@ h1 {
   margin-bottom: 4px;
 }
 
-/* Meta area */
+
 .meta {
   flex: 0 0 260px;
   display: block;
@@ -75,7 +75,7 @@ h1 {
   font-size: 0.95rem;
 }
 
-/* Buyer block */
+
 .party {
   margin: 14px 0;
 }
@@ -111,7 +111,6 @@ h1 {
   flex: 1;
 }
 
-/* Items table */
 .items table {
   width: 100%;
   border-collapse: collapse;
@@ -170,7 +169,7 @@ h1 {
   padding-top: 8px;
 }
 
-/* Footer */
+
 .invoice-foot {
   display: flex;
   justify-content: flex-end;
@@ -186,12 +185,12 @@ h1 {
   cursor: pointer;
 }
 
-/* Utility: print-only mirrors for inputs */
+
 .print-only {
   display: none;
 }
 
-/* Responsive */
+
 @media (max-width: 760px) {
   .invoice-head {
     flex-direction: column;
@@ -207,17 +206,15 @@ h1 {
   }
 }
 
-/* Print rules */
 @media print {
 
-  /* Hide controls */
+  
   #printBtn,
   #addRow,
   button.rm {
     display: none !important;
   }
 
-  /* Table inputs hidden, mirror spans shown (JS injects these spans per row) */
   td input {
     display: none !important;
   }
@@ -228,7 +225,6 @@ h1 {
     display: inline !important;
   }
 
-  /* Buyer mirrors */
   .buyer-input,
   .buyer-textarea {
     display: none !important;
@@ -239,7 +235,7 @@ h1 {
     white-space: pre-wrap;
   }
 
-  /* Meta mirrors: hide inputs, show text */
+  
   .meta input {
     display: none !important;
   }
@@ -248,7 +244,7 @@ h1 {
     display: block !important;
   }
 
-  /* Keep header spacing and totals position */
+
   .invoice-head {
     gap: 24px;
   }
@@ -267,7 +263,6 @@ h1 {
   }
 }
 
-/* Add-row button*/
 #addRow {
   display: inline-flex;
   align-items: center;
@@ -294,7 +289,6 @@ h1 {
   filter: brightness(0.96);
 }
 
-/* Ensure the left side in items-actions*/
 .items .items-actions {
   display: flex;
   justify-content: space-between;
@@ -307,7 +301,6 @@ h1 {
   flex: 0 0 auto;
 }
 
-/* Keep totals on the right*/
 .totals-wrap {
   flex: 1 1 360px;
   display: flex;
@@ -334,14 +327,13 @@ h1 {
   font-weight: 700;
 }
 
-/* Wraps logo and text side-by-side */
 .seller-brand {
   display: flex;
   align-items: flex-start;
   gap: 14px;
 }
 
-/* Logo styling */
+
 .seller-logo {
   height: 64px;
   width: auto;
@@ -351,20 +343,18 @@ h1 {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
-/* Container for title + seller text */
 .seller-text {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-/* Title spacing */
 .invoice-title {
   margin: 0 0 6px 0;
   color: #1769e0;
 }
 
-/* Print logo */
+
 @media print {
   .seller-logo {
     box-shadow: none;
@@ -382,15 +372,12 @@ h1 {
   }
 }
 
-/* Preview & Print PDF button */
-/* ========================= */
 
 .invoice-foot .actions {
   display: flex;
   gap: 10px;
 }
 
-/* Preview & Print button */
 #previewBtn {
   background: #1769e0;
   color: #fff;
@@ -406,12 +393,11 @@ h1 {
   filter: brightness(0.96);
 }
 
-
-/* Hide the buttons when printing  */
 @media print {
 
   #previewBtn,
   #downloadBtn {
     display: none !important;
   }
+
 }
